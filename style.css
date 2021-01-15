@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    background-color:#282C34;
+    color : #fff;
+  }
+ 
+main{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+
+}
+
+footer{
+  text-align: center;
+}
+.color-blue{
+   color :  #00BCF2 ; 
+}
+  /*boutton lancer le jeu*/
+  button{
+    background-color:#00BCF2;
+    padding : 10px;
+    color : #fff;
+    border-radius : 2px ;
+    outline: none;
+    border : none;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    margin-top : 15px;
+
+  }
+  button:hover{
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+  }
+  
+
+  .memory{
+    width  : 280px ; 
+    height : 280px;
+    padding : 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(225,225,225);
+    border-radius : 2px;
+    perspective: 1000px;
+}
+
+.card,.back-face,.front-face{
+  margin: 5px;
+  width : 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding : 0;
+  
+}
+
+.back-face,.front-face{
+  position: absolute;
+  font-size: 2rem;
+}
+.front-face{
+  background-color: #282C34 ;
+  backface-visibility: hidden;
+}
+.back-face{
+  background-color: #00BCF2;
+  z-index: -1;
+}
+
+.card{
+  transform-style: preserve-3d ; 
+  transition: transform 0.5s;
+
+}
+
+.active{
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
