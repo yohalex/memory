@@ -52,7 +52,7 @@ function startChrono(){
             chrono.style.color = 'red'
         }
         if(win() === true ){
-            alert('Bravo vous avez gagner \n Veuillez lancer une nouvelle partie')
+            alert('Bravo vous avez gagné \n Veuillez lancer une nouvelle partie')
             clearInterval(myInterval)
             stopChrono() 
             chrono.innerText = 35
